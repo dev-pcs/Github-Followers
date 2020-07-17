@@ -40,6 +40,7 @@ class GFAlertVC: UIViewController {
         configureContainerView()
         configureTitleLabel()
         configureActionButton()
+        configureMessageLabel()
     }
     
     
@@ -84,6 +85,20 @@ class GFAlertVC: UIViewController {
             actionButton.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: padding),
             actionButton.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -padding),
             actionButton.heightAnchor.constraint(equalToConstant: 44)
+        ])
+    }
+    
+    
+    func configureMessageLabel() {
+        containerView.addSubview(messageLabel)
+        messageLabel.text = message ?? "Unable to complete request"
+        messageLabel.numberOfLines = 4
+        
+        NSLayoutConstraint.activate([
+            messageLabel.bottomAnchor.constraint(equalTo: actionButton.bottomAnchor, constant: 8),
+            messageLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: padding),
+            messageLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -padding),
+            messageLabel.bottomAnchor.constraint(equalTo: actionButton.bottomAnchor, constant: -12)
         ])
     }
     
