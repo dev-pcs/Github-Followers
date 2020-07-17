@@ -15,6 +15,7 @@
 		12A8D1ED24C112EA00668A98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12A8D1EB24C112EA00668A98 /* LaunchScreen.storyboard */; };
 		12A8D1F524C1189900668A98 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A8D1F424C1189900668A98 /* SearchVC.swift */; };
 		12A8D1F724C118D500668A98 /* FavoritesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A8D1F624C118D500668A98 /* FavoritesListVC.swift */; };
+		12A9EEFC24C157E500B7CA0F /* FollowersListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A9EEFB24C157E500B7CA0F /* FollowersListVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		12A8D1EE24C112EA00668A98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		12A8D1F424C1189900668A98 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		12A8D1F624C118D500668A98 /* FavoritesListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListVC.swift; sourceTree = "<group>"; };
+		12A9EEFB24C157E500B7CA0F /* FollowersListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersListVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				12A8D1F624C118D500668A98 /* FavoritesListVC.swift */,
 				127C0E8824C1248C00EA371C /* GFButton.swift */,
 				127C0E8A24C1282B00EA371C /* GFTextField.swift */,
+				12A9EEFB24C157E500B7CA0F /* FollowersListVC.swift */,
 			);
 			path = GHFollowers;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 				127C0E8B24C1282B00EA371C /* GFTextField.swift in Sources */,
 				12A8D1F724C118D500668A98 /* FavoritesListVC.swift in Sources */,
 				127C0E8924C1248C00EA371C /* GFButton.swift in Sources */,
+				12A9EEFC24C157E500B7CA0F /* FollowersListVC.swift in Sources */,
 				12A8D1F524C1189900668A98 /* SearchVC.swift in Sources */,
 				12A8D1E124C112E800668A98 /* AppDelegate.swift in Sources */,
 				12A8D1E324C112E800668A98 /* SceneDelegate.swift in Sources */,
