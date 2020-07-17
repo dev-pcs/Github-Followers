@@ -21,6 +21,9 @@ class GFAlertVC: UIViewController {
     
     let padding: CGFloat = 20
     
+    
+    //MARK: - Custom Initializer
+    
     init(title: String, message: String, ButtonTitle: String) {     //custom initializer to call this VC
         super.init(nibName: nil, bundle: nil)
         self.alertTitle     = title
@@ -44,6 +47,8 @@ class GFAlertVC: UIViewController {
     }
     
     
+    //MARK: - Container view to house 3 elements
+    
     func configureContainerView() {
         view.addSubview(containerView)
         containerView.backgroundColor       = .systemBackground
@@ -62,6 +67,8 @@ class GFAlertVC: UIViewController {
     }
     
     
+    //MARK: - configure title
+    
     func configureTitleLabel() {
         containerView.addSubview(titleLabel)
         titleLabel.text = alertTitle ?? "Something went wrong"
@@ -74,6 +81,8 @@ class GFAlertVC: UIViewController {
         ])
     }
     
+    
+    //MARK: - configure button
     
     func configureActionButton() {
         containerView.addSubview(actionButton)
@@ -88,6 +97,7 @@ class GFAlertVC: UIViewController {
         ])
     }
     
+    //MARK: - configure message
     
     func configureMessageLabel() {
         containerView.addSubview(messageLabel)

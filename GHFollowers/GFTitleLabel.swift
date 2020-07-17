@@ -16,6 +16,8 @@ class GFTitleLabel: UILabel {
     }
     
     
+    //MARK: - Custom initializer
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -28,6 +30,8 @@ class GFTitleLabel: UILabel {
         configure()
     }
     
+    
+    //MARK: - Customization
     
     private func configure() {
         textColor                   = .label

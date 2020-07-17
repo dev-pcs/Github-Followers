@@ -16,6 +16,8 @@ class GFBodyLabel: UILabel {
     }
     
     
+    //MARK: - Custom initializer
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -28,6 +30,7 @@ class GFBodyLabel: UILabel {
     }
     
     
+    //MARK: - Customization
     private func configure() {
         textColor                   = .secondaryLabel
         font                        = UIFont.preferredFont(forTextStyle: .body)

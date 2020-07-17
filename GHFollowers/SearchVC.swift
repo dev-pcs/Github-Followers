@@ -45,6 +45,8 @@ class SearchVC: UIViewController {
     }
     
     
+    //MARK: - Passing data
+    
     @objc func pushFollowerListVC() {
         guard isUsernameEntered else {
             presentGFAlertOnMainThread(title: "Empty Username", message: "Please type username, we need to know who to look for 😌", buttonTitle: "Ok")
@@ -56,6 +58,8 @@ class SearchVC: UIViewController {
         navigationController?.pushViewController(followersListVC, animated: true)
     }
     
+    
+    //MARK: - Configure logoIamgeView
     
     func configureLogoImageView() {
         view.addSubview(logoimageView)
@@ -102,6 +106,7 @@ class SearchVC: UIViewController {
     }
 }
 
+//MARK: - Extensions
 
 extension SearchVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
