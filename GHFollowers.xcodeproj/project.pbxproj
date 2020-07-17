@@ -18,6 +18,7 @@
 		12A9EEFC24C157E500B7CA0F /* FollowersListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A9EEFB24C157E500B7CA0F /* FollowersListVC.swift */; };
 		12F189F324C1ED760022F2E8 /* GFTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F189F224C1ED760022F2E8 /* GFTitleLabel.swift */; };
 		12F189F524C1F37B0022F2E8 /* GFBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F189F424C1F37B0022F2E8 /* GFBodyLabel.swift */; };
+		12F189F724C1F9CA0022F2E8 /* GFAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F189F624C1F9CA0022F2E8 /* GFAlertVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		12A9EEFB24C157E500B7CA0F /* FollowersListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersListVC.swift; sourceTree = "<group>"; };
 		12F189F224C1ED760022F2E8 /* GFTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTitleLabel.swift; sourceTree = "<group>"; };
 		12F189F424C1F37B0022F2E8 /* GFBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFBodyLabel.swift; sourceTree = "<group>"; };
+		12F189F624C1F9CA0022F2E8 /* GFAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				12A9EEFB24C157E500B7CA0F /* FollowersListVC.swift */,
 				12F189F224C1ED760022F2E8 /* GFTitleLabel.swift */,
 				12F189F424C1F37B0022F2E8 /* GFBodyLabel.swift */,
+				12F189F624C1F9CA0022F2E8 /* GFAlertVC.swift */,
 			);
 			path = GHFollowers;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 				12A8D1F724C118D500668A98 /* FavoritesListVC.swift in Sources */,
 				127C0E8924C1248C00EA371C /* GFButton.swift in Sources */,
 				12A9EEFC24C157E500B7CA0F /* FollowersListVC.swift in Sources */,
+				12F189F724C1F9CA0022F2E8 /* GFAlertVC.swift in Sources */,
 				12F189F524C1F37B0022F2E8 /* GFBodyLabel.swift in Sources */,
 				12F189F324C1ED760022F2E8 /* GFTitleLabel.swift in Sources */,
 				12A8D1F524C1189900668A98 /* SearchVC.swift in Sources */,
