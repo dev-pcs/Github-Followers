@@ -43,6 +43,14 @@ class SearchVC: UIViewController {
     }
     
     
+    @objc func pushFollowerListVC() {
+        let followersListVC         = FollowersListVC()
+        followersListVC.username    = usernameTextField.text
+        followersListVC.title       = usernameTextField.text
+        navigationController?.pushViewController(followersListVC, animated: true)
+        
+    }
+    
     func configureLogoImageView() {
         view.addSubview(logoimageView)
         logoimageView.translatesAutoresizingMaskIntoConstraints = false
@@ -76,6 +84,7 @@ class SearchVC: UIViewController {
     
     func configureCallToActionButton() {
         view.addSubview(callToActionButton)
+        callToActionButton.addTarget(self, action: #selector(pushFollowerListVC), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
         
@@ -90,7 +99,7 @@ class SearchVC: UIViewController {
 
 extension SearchVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
+        pushFollowerListVC()
         return true
     }
 }
