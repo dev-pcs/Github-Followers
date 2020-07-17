@@ -22,6 +22,7 @@ class SearchVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        configureLogoImageView()
     }
     
     
@@ -35,9 +36,14 @@ class SearchVC: UIViewController {
     
     func configureLogoImageView() {
         view.addSubview(logoimageView)
-        logoimageView.adjustsImageSizeForAccessibilityContentSizeCategory = false
-        logoimageView.image = UIImage(named: "gh-logo")
+        logoimageView.translatesAutoresizingMaskIntoConstraints = false
+        logoimageView.image = UIImage(named: "gh-logo")!
         
-        
+        NSLayoutConstraint.activate([
+            logoimageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 80),
+            logoimageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            logoimageView.heightAnchor.constraint(equalToConstant: 200),
+            logoimageView.widthAnchor.constraint(equalToConstant: 200)
+        ])
     }
 }
