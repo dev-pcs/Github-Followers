@@ -59,8 +59,8 @@
 			isa = PBXGroup;
 			children = (
 				12A8D1DF24C112E800668A98 /* GHFollowers */,
-				12A8D1DE24C112E800668A98 /* Products */,
 				12A8D1EE24C112EA00668A98 /* Info.plist */,
+				12A8D1DE24C112E800668A98 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -354,7 +354,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H9R2XQV7M2;
-				INFOPLIST_FILE = GHFollowers/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -372,7 +372,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H9R2XQV7M2;
-				INFOPLIST_FILE = GHFollowers/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
