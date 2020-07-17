@@ -23,6 +23,7 @@ class SearchVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         configureLogoImageView()
+        configureTextField()
     }
     
     
@@ -44,6 +45,20 @@ class SearchVC: UIViewController {
             logoimageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             logoimageView.heightAnchor.constraint(equalToConstant: 200),
             logoimageView.widthAnchor.constraint(equalToConstant: 200)
+        ])
+    }
+    
+    
+    //MARK: - Configure Textfield constraints
+    
+    func configureTextField() {
+        view.addSubview(usernameTextField)
+        
+        NSLayoutConstraint.activate([
+            usernameTextField.topAnchor.constraint(equalTo: logoimageView.bottomAnchor, constant: 48),
+            usernameTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
+            usernameTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
+            usernameTextField.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
 }
