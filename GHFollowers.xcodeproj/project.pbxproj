@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		121DAFA124C2476F00EC69AF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121DAFA024C2476F00EC69AF /* NetworkManager.swift */; };
 		127C0E8924C1248C00EA371C /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127C0E8824C1248C00EA371C /* GFButton.swift */; };
 		127C0E8B24C1282B00EA371C /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127C0E8A24C1282B00EA371C /* GFTextField.swift */; };
 		12A8D1E124C112E800668A98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A8D1E024C112E800668A98 /* AppDelegate.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		121DAFA024C2476F00EC69AF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		127C0E8824C1248C00EA371C /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
 		127C0E8A24C1282B00EA371C /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
 		12A8D1DD24C112E800668A98 /* GHFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		121DAF9F24C2475800EC69AF /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				121DAFA024C2476F00EC69AF /* NetworkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		12A8D1D424C112E800668A98 = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +85,7 @@
 		12A8D1DF24C112E800668A98 /* GHFollowers */ = {
 			isa = PBXGroup;
 			children = (
+				121DAF9F24C2475800EC69AF /* Managers */,
 				12F189FE24C234190022F2E8 /* Model */,
 				12F189FA24C226840022F2E8 /* Screens */,
 				12F189FC24C226FE0022F2E8 /* Extensions */,
@@ -214,6 +225,7 @@
 				12F189F524C1F37B0022F2E8 /* GFBodyLabel.swift in Sources */,
 				12F18A0024C2342A0022F2E8 /* Follower.swift in Sources */,
 				12F189F324C1ED760022F2E8 /* GFTitleLabel.swift in Sources */,
+				121DAFA124C2476F00EC69AF /* NetworkManager.swift in Sources */,
 				12A8D1F524C1189900668A98 /* SearchVC.swift in Sources */,
 				12A8D1E124C112E800668A98 /* AppDelegate.swift in Sources */,
 				12A8D1E324C112E800668A98 /* SceneDelegate.swift in Sources */,
