@@ -95,7 +95,7 @@ class GFAlertVC: UIViewController {
         messageLabel.numberOfLines = 4
         
         NSLayoutConstraint.activate([
-            messageLabel.bottomAnchor.constraint(equalTo: actionButton.bottomAnchor, constant: 8),
+            messageLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
             messageLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: padding),
             messageLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -padding),
             messageLabel.bottomAnchor.constraint(equalTo: actionButton.topAnchor, constant: -12)
