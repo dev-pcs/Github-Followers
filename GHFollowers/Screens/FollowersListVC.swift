@@ -10,9 +10,7 @@ import UIKit
 
 class FollowersListVC: UIViewController {
     
-    enum Section {
-        case main
-    }
+    enum Section {case main}
     
     var username: String!
     var followers: [Follower] = []
@@ -39,7 +37,7 @@ class FollowersListVC: UIViewController {
     
     
     func configureCollectionView() {
-        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createThreeCoulmnFlowLayout())
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UIHelper.createThreeCoulmnFlowLayout(in: view))
         view.addSubview(collectionView)
         collectionView.backgroundColor = .systemBackground
         collectionView.register(FollowerCell.self, forCellWithReuseIdentifier: FollowerCell.reuseID)
