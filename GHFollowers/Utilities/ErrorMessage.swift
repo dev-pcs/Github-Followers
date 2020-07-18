@@ -8,7 +8,8 @@
 
 import Foundation
 
-enum ErrorMessage: String {
+//GFError with raw value of string and erro protocol
+enum GFError: String, Error {
     case invalidUsername = "This username created an invalid request. please try again"
     case unableToComplete = "Unable to complete your request. Please check your internet connection"
     case invalidResponse = "invalid response from server. please try again"
