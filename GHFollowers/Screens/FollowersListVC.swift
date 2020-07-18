@@ -18,7 +18,7 @@ class FollowersListVC: UIViewController {
     var followers: [Follower] = []
     var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<Section, Follower>!          //declre data source
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCollectionView()
@@ -26,7 +26,7 @@ class FollowersListVC: UIViewController {
         getFollowers()
         configureDataSource()
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
@@ -62,8 +62,8 @@ class FollowersListVC: UIViewController {
     
     
     func getFollowers() {
-        
-        NetworkManager.shared.getFollowers(for: username, page: 1) { result in
+        NetworkManager.shared.getFollowers(for: username, page: 1) { [weak self] result in      //weak self is a capturelist
+            guard let self = self else {return}         //unwrapping the optional
             
             switch result {
             case .success(let followers):
