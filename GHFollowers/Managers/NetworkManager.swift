@@ -21,7 +21,7 @@ class NetworkManager {
         let endpoint = baseURL + "/users/\(username)/followers?per_page=100&page=\(page)"
         
         guard let url = URL(string: endpoint) else {
-            completed(nil, "This username created an invalid request")
+            completed(nil, "This username created an invalid request. please try again")
             return
         }
         
