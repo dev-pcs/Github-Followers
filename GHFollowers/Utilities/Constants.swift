@@ -12,6 +12,6 @@ enum SFSymbols {
     static let location     = "mappin.and.ellipse"
     static let repos        = "folder"
     static let followers    = "heart"
-    static let gists        = "text.allignleft"
+    static let gists        = "text.alignleft"
     static let following    = "person.2"
 }
