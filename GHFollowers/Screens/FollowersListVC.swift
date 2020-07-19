@@ -25,6 +25,7 @@ class FollowersListVC: UIViewController {
         configureViewController()
         getFollowers(username: username, page: page)
         configureDataSource()
+        configureSearchController()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -62,6 +63,15 @@ class FollowersListVC: UIViewController {
     }
     
     
+    func configureSearchController() {
+        let searchController                                    = UISearchController()
+        searchController.searchResultsUpdater                   = self
+        searchController.searchBar.placeholder                  = "search a username"
+        searchController.obscuresBackgroundDuringPresentation   = false
+        navigationItem.searchController                         = searchController
+    }
+    
+    
     func getFollowers(username: String, page: Int) {
         showLoadingView()
         NetworkManager.shared.getFollowers(for: username, page: page) { [weak self] result in      //weak self is a capturelist
@@ -72,6 +82,12 @@ class FollowersListVC: UIViewController {
             case .success(let followers):
                 if followers.count < 100 {self.hasMoreFollowers = false}
                 self.followers.append(contentsOf: followers)
+                
+                if self.followers.isEmpty {
+                    let message = "This user doesn't have any followers. Go follow them 😃."
+                    DispatchQueue.main.async {self.showEmptyStateView(with: message, in: self.view)}
+                    return
+                }
                 self.updateData()
             case.failure(let error):
                 self.presentGFAlertOnMainThread(title: "bad stuff happened", message: error.rawValue, buttonTitle: "Ok")
@@ -109,5 +125,13 @@ extension FollowersListVC: UICollectionViewDelegate {
             page += 1
             getFollowers(username: username, page: page)
         }
+    }
+}
+
+
+
+extension FollowersListVC: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let filter = searchController.searchBar.text, !filter.isEmpty else {return}
     }
 }
