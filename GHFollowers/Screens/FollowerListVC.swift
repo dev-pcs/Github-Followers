@@ -49,7 +49,30 @@ class FollowersListVC: UIViewController {
     
     
     @objc func addButtonTapped() {
-        print("add button tapped")
+        showLoadingView()
+        
+        NetworkManager.shared.getUserInfo(for: username) { [weak self] Result in
+            guard let self = self else {return}
+            self.dismissLoadingView()
+            
+            switch Result {
+            case.success(let user):
+                let favorite = Follower(login: user.login, avatarUrl: user.avatarUrl)
+                persistanceManager.updateWith(favorite: favorite, actionType: .add) { [weak self] error in
+                    guard let self = self else {return}         //no memory leaks
+                    guard let error = error else {
+                        self.presentGFAlertOnMainThread(title: "success!", message: "You have successfully favorited this user 😎", buttonTitle: "Cool")
+                        return
+                    }
+                    self.presentGFAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
+                    
+                }
+                
+                
+            case.failure(let error):
+                self.presentGFAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
+            }
+        }
     }
     
     
