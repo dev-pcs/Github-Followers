@@ -12,9 +12,10 @@ class SearchVC: UIViewController {
     
     //MARK: - All Component Variables
     
-    let logoimageView       = UIImageView()
-    let usernameTextField   = GFTextField()
-    let callToActionButton  = GFButton(backgroundColor: .systemGreen, title: "Get Followers")
+    let logoimageView               = UIImageView()
+    let usernameTextField           = GFTextField()
+    let callToActionButton          = GFButton(backgroundColor: .systemGreen, title: "Get Followers")
+    var logoImageViewTopConstraint: NSLayoutConstraint!
     
     var isUsernameEntered: Bool { return !usernameTextField.text!.isEmpty}          //return true if empty
     
@@ -66,8 +67,13 @@ class SearchVC: UIViewController {
         logoimageView.translatesAutoresizingMaskIntoConstraints = false
         logoimageView.image = UIImage(named: "gh-logo")!
         
+        let topConstraintConstant: CGFloat = DevicesType.isiPhoneSE || DevicesType.isiPhone8Zoomed ? 20 : 80
+        
+        logoImageViewTopConstraint = logoimageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: topConstraintConstant)
+        logoImageViewTopConstraint.isActive = true
+        
         NSLayoutConstraint.activate([
-            logoimageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 80),
+            
             logoimageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             logoimageView.heightAnchor.constraint(equalToConstant: 200),
             logoimageView.widthAnchor.constraint(equalToConstant: 200)
