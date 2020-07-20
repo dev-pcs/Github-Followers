@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		121437D024C611CB00C8D0ED /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121437CF24C611CB00C8D0ED /* PersistanceManager.swift */; };
 		121DAFA124C2476F00EC69AF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121DAFA024C2476F00EC69AF /* NetworkManager.swift */; };
 		121DAFA824C283E900EC69AF /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121DAFA724C283E900EC69AF /* FollowerCell.swift */; };
 		121DAFAA24C284AB00EC69AF /* GFAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121DAFA924C284AB00EC69AF /* GFAvatarImageView.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		121437CF24C611CB00C8D0ED /* PersistanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceManager.swift; sourceTree = "<group>"; };
 		121DAFA024C2476F00EC69AF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		121DAFA724C283E900EC69AF /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
 		121DAFA924C284AB00EC69AF /* GFAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAvatarImageView.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				121DAFA024C2476F00EC69AF /* NetworkManager.swift */,
+				121437CF24C611CB00C8D0ED /* PersistanceManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				12D33EE624C50A4000A052FC /* GFFollowerItemVC.swift in Sources */,
 				12D33EDE24C4F11800A052FC /* GFItemInfoView.swift in Sources */,
 				121DAFA824C283E900EC69AF /* FollowerCell.swift in Sources */,
+				121437D024C611CB00C8D0ED /* PersistanceManager.swift in Sources */,
 				12F189F524C1F37B0022F2E8 /* GFBodyLabel.swift in Sources */,
 				12D33ED824C4CEA100A052FC /* GFUserInfoHeaderVC.swift in Sources */,
 				12D33ED624C4B5A900A052FC /* GFError.swift in Sources */,
