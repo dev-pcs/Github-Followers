@@ -17,6 +17,7 @@ protocol  UserInfoVCDelegate: class {
 class UserInfoVC: UIViewController {
     
     var username: String!
+    weak var delegate: FollowerListVCDelegate!
     
     let headerView          = UIView()
     let itemViewOne         = UIView()
@@ -124,11 +125,17 @@ extension UserInfoVC: UserInfoVCDelegate {
             return
         }
     
+        presentSafariVC(with: url)
         
     
 }
     func didTapGetFollowers(for user: User) {
-
+        guard user.followers != 0 else {
+            presentGFAlertOnMainThread(title: "No followers", message: "his user has no followers, what a shame 🙁", buttonTitle: "So sad")
+            return
+        }
+        delegate.didRequestFollowers(for: user.login)
+        dismissVC()
     }
     
     
