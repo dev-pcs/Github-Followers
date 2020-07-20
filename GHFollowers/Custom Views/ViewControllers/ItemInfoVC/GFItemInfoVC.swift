@@ -53,7 +53,6 @@ class GFItemInfoVC: UIViewController {
     }
     
     @objc func actionButtonTapped() {
-        
     }
     
     

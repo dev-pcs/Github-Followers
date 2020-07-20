@@ -124,19 +124,16 @@ extension UserInfoVC: UserInfoVCDelegate {
             presentGFAlertOnMainThread(title: "Invalid URL", message: "The url attached to this user is invalid.", buttonTitle: "Ok")
             return
         }
-    
         presentSafariVC(with: url)
-        
+    }
     
-}
+    
     func didTapGetFollowers(for user: User) {
         guard user.followers != 0 else {
-            presentGFAlertOnMainThread(title: "No followers", message: "his user has no followers, what a shame 🙁", buttonTitle: "So sad")
+            presentGFAlertOnMainThread(title: "No followers", message: "This user has no followers, what a shame 🙁", buttonTitle: "So sad")
             return
         }
         delegate.didRequestFollowers(for: user.login)
         dismissVC()
     }
-    
-    
 }
