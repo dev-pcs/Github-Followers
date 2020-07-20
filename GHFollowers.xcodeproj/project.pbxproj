@@ -189,10 +189,10 @@
 				121DAFA224C2761600EC69AF /* Utilities */,
 				121DAF9F24C2475800EC69AF /* Managers */,
 				12F189FE24C234190022F2E8 /* Model */,
-				12F189FA24C226840022F2E8 /* Screens */,
 				12F189FC24C226FE0022F2E8 /* Extensions */,
-				12F189FD24C2270F0022F2E8 /* Support */,
 				12F189FB24C226D00022F2E8 /* Custom Views */,
+				12F189FA24C226840022F2E8 /* Screens */,
+				12F189FD24C2270F0022F2E8 /* Support */,
 			);
 			path = GHFollowers;
 			sourceTree = "<group>";
