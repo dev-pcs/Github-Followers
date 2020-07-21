@@ -15,7 +15,8 @@ class GFEmptyStateView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        configure()
+        configureLogoImageView()
+        configureMessageLabel()
         
     }
     
@@ -29,26 +30,37 @@ class GFEmptyStateView: UIView {
         messageLabel.text = message
     }
     
-    private func configure() {
-        addSubview(messageLabel)
+    
+    private func configureLogoImageView() {
         addSubview(logoImageView)
+        logoImageView.image = Images.emptyStateLogo
+        logoImageView.translatesAutoresizingMaskIntoConstraints = false
         
+        let logoBottomConstant: CGFloat = DevicesType.isiPhoneSE || DevicesType.isiPhone8Zoomed ? 80 : 40
+        let logoImageViewBottomContraint = logoImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: logoBottomConstant)
+        logoImageViewBottomContraint.isActive = true
+        
+        NSLayoutConstraint.activate([
+            logoImageView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1.3),
+            logoImageView.heightAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1.3),
+            logoImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 170)
+        ])
+    }
+    
+    
+    private func configureMessageLabel() {
+        addSubview(messageLabel)
         messageLabel.numberOfLines  = 3
         messageLabel.textColor      = .secondaryLabel
         
-        logoImageView.image         = Images.emptyStateLogo
-        logoImageView.translatesAutoresizingMaskIntoConstraints = false
+        let labelCenterYConstant: CGFloat = DevicesType.isiPhoneSE || DevicesType.isiPhone8Zoomed ? -80 : -150
+        let messageLabelCenterYconstraint = messageLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: labelCenterYConstant)
+        messageLabelCenterYconstraint.isActive = true
         
         NSLayoutConstraint.activate([
-            messageLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: -150),
-            messageLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 40),
-            messageLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -40),
-            messageLabel.heightAnchor.constraint(equalToConstant: 200),
-            
-            logoImageView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1.3),
-            logoImageView.heightAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1.3),
-            logoImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 170),
-            logoImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 40)
+        messageLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 40),
+        messageLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -40),
+        messageLabel.heightAnchor.constraint(equalToConstant: 200),
         ])
     }
 }

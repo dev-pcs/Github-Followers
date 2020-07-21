@@ -71,7 +71,7 @@ class GFItemInfoView: UIView {
             symbolImageView.image   = SFSymbols.followers
             titleLabel.text         = "Followers"
         case .following:
-            symbolImageView.image   = SFSymbols.following)
+            symbolImageView.image   = SFSymbols.following
             titleLabel.text         = "Following"
         }
         
