@@ -8,10 +8,14 @@
 
 import UIKit
 
+protocol UserInfoVCDelegate: class {
+    func didRequestFollowers(for username: String)
+}
+
 class UserInfoVC: GFDataLoadingVC {
     
     var username: String!
-    weak var delegate: FollowerListVCDelegate!
+    weak var delegate: UserInfoVCDelegate!
     
     let headerView          = UIView()
     let itemViewOne         = UIView()
@@ -44,16 +48,8 @@ class UserInfoVC: GFDataLoadingVC {
     
     
     func configureUIElements(with user: User) {
-        
-        let repoItemVC              = GFRepoItemVC(user: user)
-        repoItemVC.delegate         = self
-        
-        let followerItemVC          = GFFollowerItemVC(user: user)
-        followerItemVC.delegate     = self
-        
-        
-        self.add(childVC: repoItemVC, to: self.itemViewOne)
-        self.add(childVC: followerItemVC, to: self.itemViewTwo)
+        self.add(childVC: GFRepoItemVC(user: user, delegate: self), to: self.itemViewOne)
+        self.add(childVC: GFFollowerItemVC(user: user, delegate: self), to: self.itemViewTwo)
         self.add(childVC: GFUserInfoHeaderVC(user: user), to: self.headerView)
         self.dateLabel.text = "Github since \(user.createdAt.convertToMonthYearFormat())"
     }
@@ -113,8 +109,7 @@ class UserInfoVC: GFDataLoadingVC {
 
 //MARK: - Extensions
 
-
-extension UserInfoVC: ItemInfoVCDelegate {
+extension UserInfoVC: GFRepoItemVCDelegate {
     
     func didtapGithubProfile(for user: User) {
         guard let url = URL(string: user.htmlUrl) else {
@@ -123,7 +118,10 @@ extension UserInfoVC: ItemInfoVCDelegate {
         }
         presentSafariVC(with: url)
     }
-    
+}
+
+
+extension UserInfoVC: GFFollowerItemVCDelegate {
     
     func didTapGetFollowers(for user: User) {
         guard user.followers != 0 else {

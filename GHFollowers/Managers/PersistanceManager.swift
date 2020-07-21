@@ -24,21 +24,19 @@ enum persistanceManager {
     static func updateWith(favorite: Follower, actionType: persistanceActionType, completed: @escaping (GFError?) -> Void) {
         retrieveFavorites{ Result in
             switch Result {
-            case.success(let favorites):
-                var retrievedFavorites = favorites
-                
+            case.success(var favorites):
                 
                 switch actionType {
                 case.add:
-                    guard !retrievedFavorites.contains(favorite) else {
+                    guard !favorites.contains(favorite) else {
                         completed(.alreadyinFavorites)
                         return
                     }
-                    retrievedFavorites.append(favorite)
+                    favorites.append(favorite)
                 case.remove:
-                    retrievedFavorites.removeAll { $0 .login == favorite.login}
+                    favorites.removeAll { $0 .login == favorite.login}
                 }
-                completed(save(favorites: retrievedFavorites))
+                completed(save(favorites: favorites))
                 
                 
             case.failure(let error):
