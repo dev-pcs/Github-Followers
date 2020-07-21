@@ -117,6 +117,9 @@ class UserInfoVC: GFDataLoadingVC {
 }
 
 
+//MARK: - Extensions
+
+
 extension UserInfoVC: UserInfoVCDelegate {
     
     func didtapGithubProfile(for user: User) {
