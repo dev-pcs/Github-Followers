@@ -14,7 +14,6 @@ protocol UserInfoVCDelegate: class {
 
 class UserInfoVC: GFDataLoadingVC {
     
-    
     var username: String!
     weak var delegate: UserInfoVCDelegate!
     
@@ -28,6 +27,7 @@ class UserInfoVC: GFDataLoadingVC {
     var itemViews: [UIView] = []
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewController()
@@ -35,6 +35,7 @@ class UserInfoVC: GFDataLoadingVC {
         getUserInfo()
         configureScrollView()
     }
+    
     
     
     func getUserInfo () {
@@ -118,6 +119,7 @@ class UserInfoVC: GFDataLoadingVC {
         childVC.view.frame = containerView.bounds
         childVC.didMove(toParent: self)
     }
+    
     
     @objc func dismissVC() {
         dismiss(animated: true)

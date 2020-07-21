@@ -12,14 +12,10 @@ enum persistanceActionType {
     case add, remove
 }
 
-
 enum persistanceManager {
     static private let defaults = UserDefaults.standard
     
-    enum keys {
-        static let favorites = "favorites"
-    }
-    
+    enum keys {static let favorites = "favorites"}
     
     static func updateWith(favorite: Follower, actionType: persistanceActionType, completed: @escaping (GFError?) -> Void) {
         retrieveFavorites{ Result in
@@ -44,8 +40,6 @@ enum persistanceManager {
             }
         }
     }
-    
-    
     
     
     //we are saving a custom object thats why
