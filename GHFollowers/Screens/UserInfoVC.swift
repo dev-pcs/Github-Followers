@@ -8,12 +8,6 @@
 
 import UIKit
 
-
-protocol  UserInfoVCDelegate: class {
-    func didtapGithubProfile(for user: User)
-    func didTapGetFollowers(for user: User)
-}
-
 class UserInfoVC: GFDataLoadingVC {
     
     var username: String!
@@ -90,7 +84,7 @@ class UserInfoVC: GFDataLoadingVC {
         
         NSLayoutConstraint.activate([
             headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            headerView.heightAnchor.constraint(equalToConstant: 180),
+            headerView.heightAnchor.constraint(equalToConstant: 210),
             
             itemViewOne.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: padding),
             itemViewOne.heightAnchor.constraint(equalToConstant: itemHeight),
@@ -99,7 +93,7 @@ class UserInfoVC: GFDataLoadingVC {
             itemViewTwo.heightAnchor.constraint(equalToConstant: itemHeight),
             
             dateLabel.topAnchor.constraint(equalTo: itemViewTwo.bottomAnchor, constant: padding),
-            dateLabel.heightAnchor.constraint(equalToConstant: 18)
+            dateLabel.heightAnchor.constraint(equalToConstant: 40)
         ])
     }
     
@@ -120,7 +114,7 @@ class UserInfoVC: GFDataLoadingVC {
 //MARK: - Extensions
 
 
-extension UserInfoVC: UserInfoVCDelegate {
+extension UserInfoVC: ItemInfoVCDelegate {
     
     func didtapGithubProfile(for user: User) {
         guard let url = URL(string: user.htmlUrl) else {

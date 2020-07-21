@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol  ItemInfoVCDelegate: class {
+    func didtapGithubProfile(for user: User)
+    func didTapGetFollowers(for user: User)
+}
+
 class GFItemInfoVC: UIViewController {
     
     let stackView           = UIStackView()
@@ -15,7 +20,7 @@ class GFItemInfoVC: UIViewController {
     let itemInfoViewTwo     = GFItemInfoView()
     let actionButton        = GFButton()
     var user: User!
-    weak var delegate: UserInfoVCDelegate!          //to prvent retain cycle, keep delegate weak
+    weak var delegate: ItemInfoVCDelegate!          //to prvent retain cycle, keep delegate weak
     
     init(user: User) {
         super.init(nibName: nil, bundle: nil)
