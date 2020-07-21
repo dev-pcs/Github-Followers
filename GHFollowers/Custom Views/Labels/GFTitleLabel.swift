@@ -10,7 +10,7 @@ import UIKit
 
 class GFTitleLabel: UILabel {
     
-    override init(frame: CGRect) {
+    override init(frame: CGRect) {      //designated initializer
         super.init(frame: frame)
         configure()
     }
@@ -23,11 +23,10 @@ class GFTitleLabel: UILabel {
     }
     
     
-    init(textAlignment: NSTextAlignment, fontSize: CGFloat) {
-        super.init(frame: .zero)
+    convenience init(textAlignment: NSTextAlignment, fontSize: CGFloat) {
+        self.init(frame: .zero)         //configure will be called in init
         self.textAlignment = textAlignment
         self.font = UIFont.systemFont(ofSize: fontSize, weight: .bold)
-        configure()
     }
     
     
