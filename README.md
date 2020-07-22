@@ -2,7 +2,7 @@
 Sean Allen course follow along
 
 ### Description: 
-* This iOS application can search for a followers of a particular user and is capable of adding users to favorites\n
+* This iOS application can search for followers of a particular user and is capable of adding users to favorites
 * This app also has an user info screen to display no. of followers, following, gists, repos and their profile
 
 ### What I learned:
