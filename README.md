@@ -5,9 +5,6 @@ Sean Allen course follow along
 * This iOS application can search for a followers of a particular user and is capable of adding users to favorites\n
 * This app also has an user info screen to display no. of followers, following, gists, repos and their profile
 
-### Screenshots:
-
-
 ### What I learned:
 * Programmatic UI,
 * Building custom reusable UI elements,
@@ -31,4 +28,14 @@ Sean Allen course follow along
 
 ### Resources:
 > https://github.com/aaronbrethorst/SemanticUI
+
+### Screenshots:
+
+<img src="Screenshots/alert.png" width="200">
+<img src="Screenshots/alert2Screen.png" width="200">
+<img src="Screenshots/favoritesScreen.png" width="200">
+<img src="Screenshots/followerScreen.png" width="200">
+<img src="Screenshots/searchScreen.png" width="200">
+<img src="Screenshots/userInfoScreen.png" width="200">
+
   
